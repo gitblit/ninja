@@ -19,7 +19,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ninja-annotation-router-beta</artifactId>
+    <artifactId>ninja-swagger-beta</artifactId>
     <packaging>jar</packaging>
 
     <parent>
@@ -31,27 +31,32 @@
     <url>http://www.ninjaframework.org</url>
 
     <build>
-
         <resources>
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*</include>
                 </includes>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
                 <includes>
                     <include>**/*</include>
                 </includes>
             </resource>
         </resources>
-
+        <plugins>
+        </plugins>
     </build>
 
+<!-- 	<repositories> -->
+<!--     	<repository> -->
+<!--         	<id>soapUI Repository</id> -->
+<!--         	<url>http://www.soapui.org/repository/maven2</url> -->
+<!--     	</repository> -->
+<!-- 	</repositories> -->
+	
     <dependencies>
     
         <dependency>
@@ -61,17 +66,27 @@
 
         <dependency>
             <groupId>org.ninjaframework</groupId>
-            <artifactId>ninja-test-utilities</artifactId>
-            <scope>test</scope>
+            <artifactId>ninja-annotation-router-beta</artifactId>
         </dependency>
-        
-        <dependency>
-        	<groupId>org.reflections</groupId>
-        	<artifactId>reflections</artifactId>
-        	<version>0.9.8</version>
-        </dependency>
+
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>org.webjars</groupId>
+    		<artifactId>swagger-js</artifactId>
+    		<version>2.0.3</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>org.webjars</groupId>
+    		<artifactId>swagger-ui</artifactId>
+    		<version>2.0.18</version>
+		</dependency>
 
     </dependencies>
-
 
 </project>

@@ -43,6 +43,8 @@
         <module>ninja-maven-plugin</module>
         <module>ninja-annotation-router-beta</module>
         <module>ninja-async-machine-beta</module>
+        <module>ninja-swagger-beta</module>
+        <module>ninja-swagger-test-beta</module>
 
         <!-- archetypes -->
         <module>ninja-servlet-jpa-blog-archetype</module>
@@ -302,7 +304,7 @@
                 <artifactId>ninja-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.ninjaframework</groupId>
                 <artifactId>ninja-servlet</artifactId>
@@ -315,6 +317,18 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.ninjaframework</groupId>
+                <artifactId>ninja-annotation-router-beta</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ninjaframework</groupId>
+                <artifactId>ninja-swagger-beta</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            
             <dependency>
                 <groupId>org.ninjaframework</groupId>
                 <artifactId>ninja-test-utilities</artifactId>
